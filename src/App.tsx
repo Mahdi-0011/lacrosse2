@@ -4,23 +4,24 @@ import HomePage from "./routes/HomePage";
 import AboutPage from "./routes/AboutPage";
 import MonstersPage from "./routes/MonstersPage";
 import MonsterDetailsPage from "./routes/MonsterDetailsPage";
+import RootLayout from "./layouts/RootLayout";
 
 const router = createBrowserRouter([
 	{
 		path: "/",
-		element: <HomePage />,
-	},
-	{
-		path: "/about",
-		element: <AboutPage />,
-	},
-	{
-		path: "/monsters",
-		element: <MonstersPage />,
+		element: <RootLayout />,
 		children: [
+			{ index: true, element: <HomePage /> },
+			{ path: "about", element: <AboutPage /> },
 			{
-				path: "/monsters/:monsterid",
-				element: <MonsterDetailsPage />,
+				path: "monsters",
+				element: <MonstersPage />,
+				children: [
+					{
+						path: "/monsters/:monsterid",
+						element: <MonsterDetailsPage />,
+					},
+				],
 			},
 		],
 	},

@@ -6,7 +6,6 @@ export default function MonstersPage() {
 	return (
 		<div>
 			<h1>MonstersPage</h1>
-			<Link to="/">Home</Link> - <Link to="/about">About</Link>
 			<ul>
 				{monsters.map((monster) => (
 					<li key={monster}>
