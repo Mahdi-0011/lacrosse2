@@ -6,6 +6,7 @@ import MonstersPage from "./routes/MonstersPage";
 import MonsterDetailsPage from "./routes/MonsterDetailsPage";
 import RootLayout from "./layouts/RootLayout";
 import ResultsPage from "./routes/ResultsPage";
+import Contacts from "./routes/Contacts";
 
 const router = createBrowserRouter([
 	{
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
 			{ index: true, element: <HomePage /> },
 			{ path: "about", element: <AboutPage /> },
 			{ path: "results", element: <ResultsPage /> },
+			{	path: "Contacts", element: <Contacts />},
 			{
 				path: "monsters",
 				element: <MonstersPage />,

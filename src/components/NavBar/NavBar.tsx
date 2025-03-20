@@ -6,6 +6,7 @@ export default function NavBar() {
 		{ to: "/", label: "Home" },
 		{ to: "/about", label: "About" },
 		{ to: "/monsters", label: "Monsters" },
+		{ to: "/Contacts", label: "Contacts"}
 	];
 
 	const getLinkClassName = ({ isActive }: { isActive: boolean }) => {
