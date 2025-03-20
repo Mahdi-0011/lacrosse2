@@ -8,6 +8,7 @@ export default function SearchBar() {
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		navigate(`/results?query=${encodeURIComponent(searchTerm)}`);
+		setSearchTerm("");
 	};
 
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
